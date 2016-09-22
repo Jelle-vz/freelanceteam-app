@@ -8,7 +8,6 @@ class Header extends React.Component {
     return (
 			<div>
 				<h1 className="heading-1">Itza workx!</h1>
-				<h2 className="heading-2">This is the header</h2>
 			</div>
 		)
   }
