@@ -21,14 +21,14 @@ function request(scope, url, type) {
 	 });
 }
 
-export default class Jobs extends React.Component {
+export default class Users extends React.Component {
 	render(){
-		var jobs = this.props.data;
+		var data = this.props.data;
 		return(
 			<ul>
-				{jobs.map(function(item){
+				{data.map(function(item){
 					return (
-						<li>{item.title} </li>
+						<li>{item.username} </li>
 					)
 				})}
 			</ul>
@@ -53,16 +53,17 @@ class Body extends React.Component {
 
   render() {
 		let { state, props } = this;
-		let jobs = state.data.jobs;
+		let users = state.data;
 
     return (
 			<div>
-			 This is the body or the content.<br/>
-			 {jobs ? <Jobs data={jobs} /> : <span> Loading... </span>}
+			 <h3>Example list</h3>
+			 {users ? <Users data={users} /> : <span> Loading... </span>}
+			 <br/>
 			 <Button>Added Bootstrap support</Button>
 			</div>
 		)
   }
 }
 
-ReactDOM.render(<Body xhr="http://codepen.io/jobs.json"/>, document.getElementById('content'));
+ReactDOM.render(<Body xhr="https://jsonplaceholder.typicode.com/users"/>, document.getElementById('content'));
