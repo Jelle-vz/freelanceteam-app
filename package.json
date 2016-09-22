@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack",
-    "start": "./node_modules/.bin/webpack-dev-server --inline --content-base --progress --colors --watch ./"
+    "start": "./node_modules/.bin/webpack-dev-server --inline --content-base --progress --colors --watch ./",
+		"postinstall": "linklocal link"
   },
   "dependencies": {
     "axios": "^0.7.0",
@@ -16,7 +17,8 @@
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^1.0.0-rc3",
-    "react-tooltip": "^0.8.3"
+    "react-tooltip": "^0.8.3",
+    "wvz-http-request": "file:./local_modules/http-request"
   },
   "devDependencies": {
     "babel-core": "^5.8.38",
@@ -26,6 +28,7 @@
     "bootstrap": "^3.3.7",
     "css-loader": "^0.21.0",
     "file-loader": "^0.8.4",
+    "linklocal": "^2.6.1",
     "node-sass": "^3.10.0",
     "react-bootstrap": "^0.30.3",
     "sass-loader": "^4.0.2",
