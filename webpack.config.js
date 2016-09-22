@@ -20,7 +20,10 @@ module.exports = {
 				loader: 'babel-loader',
 				exclude: /node_modules/
 			},
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
+			{
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      },
       { test: /(\.eot|\.woff2|\.woff|\.ttf|\.svg)/, loader: 'file-loader' }
     ]
   },
