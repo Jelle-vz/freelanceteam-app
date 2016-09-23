@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Userlist from '../modules/user-list/Userlist.jsx';
+import Userlist from '../02-modules/user-list/Userlist.jsx';
 
 
 class Body extends React.Component {

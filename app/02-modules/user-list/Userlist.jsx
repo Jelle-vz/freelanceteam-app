@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Tile from '../../01-atoms/tiles/Default.jsx';
+
 function fetchJson(url, type, scope) {
 	fetch(url).then(function(response) {
 			response.json().then(function(myJson) {
@@ -30,13 +32,13 @@ export default class Userlist extends React.Component {
 	render(){
 		let data = this.state.data;
 		return(
-			<ul>
+			<span>
 				{data.map(function(item){
 					return (
-						<li>{item.username} </li>
+						<Tile data={item} key={item.id}/>
 					)
 				})}
-			</ul>
+			</span>
 		)
 	}
 }
