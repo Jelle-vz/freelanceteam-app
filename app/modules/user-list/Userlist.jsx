@@ -1,20 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import $ from 'jquery';
-
-function request(scope, url, type) {
-	$.ajax({
-		 url: url,
-		 dataType: type,
-		 cache: false,
-		 success: function(data) {
-			 scope.setState({data: data});
-		 }.bind(this),
-		 error: function(xhr, status, err) {
-			 console.error(url, status, err.toString());
-		 }.bind(this)
-	 });
+function fetchJson(url, type, scope) {
+	fetch(url).then(function(response) {
+			response.json().then(function(myJson) {
+				scope.setState({data: myJson});
+			})
+	}).catch(function(err) {
+		console.log('error');
+	});
 }
 
 export default class Userlist extends React.Component {
@@ -24,13 +18,13 @@ export default class Userlist extends React.Component {
 		this.state = {
 			data : []
 		};
-		
-		request(this, this.props.data, 'json');
+
+		fetchJson(this.props.data, 'json', this);
 
 	}
 
 	componentWillUnmount() {
-		request().abort();
+		fetchJson().abort();
 	}
 
 	render(){
