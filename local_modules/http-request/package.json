@@ -1,0 +1,10 @@
+{
+  "name": "wvz-http-request",
+  "version": "0.0.1",
+  "description": "http requests for React",
+  "main": "main.js",
+  "author": "Jelle Verzijden",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
