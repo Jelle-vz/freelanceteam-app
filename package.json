@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack",
     "start": "./node_modules/.bin/webpack-dev-server --inline --content-base --progress --colors --watch ./",
-		"postinstall": "linklocal link"
+    "postinstall": "linklocal link"
   },
   "dependencies": {
     "axios": "^0.7.0",
@@ -27,6 +27,7 @@
     "babel-preset-react": "^6.11.1",
     "bootstrap": "^3.3.7",
     "css-loader": "^0.21.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
     "linklocal": "^2.6.1",
     "node-sass": "^3.10.0",

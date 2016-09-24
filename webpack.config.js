@@ -18,13 +18,21 @@ module.exports = {
 			{
 				test: /\.jsx?$/,
 				loader: 'babel-loader',
-				exclude: /node_modules/
+				exclude: /node_modules|lib/
 			},
 			{
         test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        loaders:[
+          'style?sourceMap',
+          'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'sass?sourceMap'
+        ],
+        exclude: /node_modules|lib/
       },
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
       { test: /(\.eot|\.woff2|\.woff|\.ttf|\.svg)/, loader: 'file-loader' }
     ]
   },
