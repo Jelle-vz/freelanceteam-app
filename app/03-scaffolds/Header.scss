@@ -1,6 +1,6 @@
-.heading_one {
-	$color: orange;
+@import "~wvz-ui-utilities/colors/theme";
 
-	color:$color;
+.heading_one {
+	color:$tetColor;
 	font:3em/1em Georgia, serif;
 }
