@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Footer extends React.Component {
+import styles from './Footer.scss'
+
+export default class Footer extends React.Component {
   render() {
     return (
-			<div>
+			<footer className={styles.page_footer}>
 				This is the footer
-			</div>
+			</footer>
 		)
   }
 }
-
-ReactDOM.render(<Footer/>, document.getElementById('footer'));

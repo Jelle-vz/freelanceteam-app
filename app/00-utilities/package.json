@@ -1,0 +1,10 @@
+{
+	"name": "wvz-ui-utilities",
+	"version": "0.0.1",
+	"description": "WVZ UI Utilities",
+	"main": "index.jsx",
+	"author": "Jelle Verzijden",
+	"license": "MIT",
+	"dependencies": {
+	}
+}
