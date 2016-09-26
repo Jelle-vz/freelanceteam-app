@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import styles from './Header.scss';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   render() {
     return (
 			<div>
@@ -12,5 +12,3 @@ class Header extends React.Component {
 		)
   }
 }
-
-ReactDOM.render(<Header/>, document.getElementById('header'));
