@@ -6,9 +6,9 @@ import styles from './Header.scss';
 export default class Header extends React.Component {
   render() {
     return (
-			<div>
-				<h1 className={styles.heading_one}>Itza workx!</h1>
-			</div>
+			<header className={styles.main_header}>
+			header
+			</header>
 		)
   }
 }

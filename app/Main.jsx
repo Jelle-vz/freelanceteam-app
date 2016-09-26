@@ -14,7 +14,6 @@ class Main extends React.Component {
     return (
 			<div>
 				<Header/>
-				<h3>Example list</h3>
 			 	<Userlist data={users} />
 			 	<Footer/>
 			</div>
