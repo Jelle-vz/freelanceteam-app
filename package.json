@@ -12,14 +12,16 @@
   "dependencies": {
     "axios": "^0.7.0",
     "bootstrap": "^3.3.5",
+    "firebase": "^3.4.1",
     "jquery": "^3.1.0",
     "moment": "^2.10.6",
+    "re-base": "^2.2.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^1.0.0-rc3",
     "react-tooltip": "^0.8.3",
     "wvz-http-request": "file:./local_modules/http-request",
-		"wvz-ui-utilities": "file:./app/00-utilities"
+    "wvz-ui-utilities": "file:./app/00-utilities"
   },
   "devDependencies": {
     "babel-core": "^5.8.38",
